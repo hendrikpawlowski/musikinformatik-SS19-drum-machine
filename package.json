@@ -1,0 +1,24 @@
+{
+  "name": "musikinformatik-ss19-drum-machine",
+  "version": "1.0.0",
+  "description": "Nice",
+  "main": "index.js",
+  "dependencies": {
+    "tone": "^13.4.9",
+    "howler": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hendrikpawlowski/musikinformatik-SS19-drum-machine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hendrikpawlowski/musikinformatik-SS19-drum-machine/issues"
+  },
+  "homepage": "https://github.com/hendrikpawlowski/musikinformatik-SS19-drum-machine#readme"
+}
