@@ -3,41 +3,47 @@ let snare_track = document.getElementsByClassName("snare")[0].getElementsByClass
 let hihat_track = document.getElementsByClassName("hihat")[0].getElementsByClassName("sixteenth");
 let cowbell_track = document.getElementsByClassName("cowbell")[0].getElementsByClassName("sixteenth");
 var tempo = 120;
+var timeBetweenSixteenths = tempo / 4;
 
 
 function play() {
 
-  console.log("play gestartet");
+  var base_sound = new Howl({
+    src: ['./audio/base.wav']
+  });
 
-  var base_sound = new Tone.Player('./audio/base.wav').toMaster();
+  var snare_sound = new Howl({
+    src: ['./audio/snare.wav']
+  });
 
-  let index = 0;
+  var hihat_sound = new Howl({
+    src: ['./audio/hihat.wav']
+  });
 
-  Tone.Transport.scheduleRepeat(repeat, '16n');
-  Tone.Transport.bpm.value = tempo;
-  Tone.Transport.start();
+  var cowbell_sound = new Howl({
+    src: ['./audio/cowbell.wav']
+  });
 
-  // function repeat() {
-  //   console.log(index);
-  //   let currentStep = index % 16;
+  playSound(base_track, base_sound);
+  playSound(snare_track, snare_sound);
+  playSound(hihat_track, hihat_sound);
+  playSound(cowbell_track, cowbell_sound);
+}
 
+async function playSound(track, sound) {
 
-  //   if (base_track[currentStep].classList.contains('on')) {
-  //     base_sound.start();
-  //   }
-  //   index++;
-  // }
-  console.log(base_track.length);
+  var current = 0;
 
-  new Tone.Loop(repeat, '16n').start(0);
+  setInterval(function () {
 
-  function repeat() {
-    if (index === 16) index = 0;
-
-    if (base_track[index].classList.contains('on')) { 
-      base_sound.start();
+    if (track[current].classList.contains("on")) {
+      sound.play();
     }
 
-    index++;
-  }
+    current++;
+    if (current === track.length) {
+      current = 0;
+    }
+    console.log(current);
+  }, 125);
 }
