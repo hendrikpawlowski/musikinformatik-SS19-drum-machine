@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Drum Machine</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="./css/typo.css">
+</head>
+
+<body>
+  <div class="grid-wrapper">
+    <div class="labels">
+      <div class="label-element">
+        <p>Base</p>
+      </div>
+      <div class="label-element">
+        <p>Snare</p>
+      </div>
+      <div class="label-element">
+        <p>HiHat</p>
+      </div>
+      <div class="label-element">
+        <p>Cowbell</p>
+      </div>
+    </div>
+
+    <div class="tracks">
+      <div class="base track">
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+      </div>
+      <div class="snare track">
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+      </div>
+      <div class="hihat track">
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+      </div>
+      <div class="cowbell track">
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth first"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+        <button onClick="setOnOff(this)" class="sixteenth"></button>
+      </div>
+    </div>
+
+    <div class="button">
+      <a href="#" class="play" onClick="play()">
+        <div class="border">
+          <img class="icon" src="icons/baseline-play_arrow-24px.svg" alt="Start Button">
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.0.1/Tone.min.js"></script>
+  <script src="js/button.js"></script>
+  <script src="js/play.js"></script>
+</body>
+
+</html>
